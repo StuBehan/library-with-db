@@ -1,6 +1,10 @@
-<h1>Library</h1>
+<h1>New books availiable for withdrawl</h1>
 
 <% LibraryManager.all.each do |hash| %>
-<li><%=hash[:id]%> <%=hash[:title]%> <%=hash[:author]%> <%=hash[:isbn]%></li>
+<li><%=hash[:title]%> - <%=hash[:author]%> - <%=hash[:isbn]%></li>
 <%end%>
 </ul>
+<br>
+<form action='/add' method='get'>
+  <input type='submit' value='Add more books'>
+</form>
