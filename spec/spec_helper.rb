@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+require './spec/setup_test_database'
 require 'simplecov'
 require 'simplecov-console'
 require 'capybara'
@@ -21,7 +21,7 @@ Capybara.app = Library
 RSpec.configure do |config|
 
   config.before(:each) do
-    
+    setup_test_database
   end
 
   config.expect_with :rspec do |expectations|
